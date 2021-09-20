@@ -1,0 +1,87 @@
+- vuejs la framework cua js
+- vuejs va react kha tuong dong
+
++ Data = state
++ Vuex = Redux
++ Vue Router = router
++ component = component
++ props
++ NPM: node package manager
+
+Cai dat vuejs:
+- nodejs + npm => npm -v se thay version
+- vue cli 
+- npm install -g @vuejs/cli
+kiem tra : vue --version
+
+tao project : vue create hello-vue
+node_module : tat ca cac goi cua chung ta chua trong do
+
+Cau truc thu muc : 
+- src : source code
+    + main.js => file goc
+    + App.vue => component goc = tat ca nhung component khac
+    + assets: hinh anh, font
+    + Component => chua cac component con
+
+- Component: (menu, sidebar, button)
+    + 3 thanh phan:
+        + Hien thi: Template : html
+        + script: js => xu ly
+        + style: css => lam dep
+            + Ho tro scss
+            + scope style: style danh rieng cho component
+- Tao component:
+    + Tao file .vue
+    + Import
+    + Khai bao
+
+- Root element:
+    + Bat buoc
+
+- 2 ways binding:
+    + Bind du lieu 2 chieu (rang buoc)
+
+- Lifecycle: vong doi cua component trong vue
+- mount: khi co 1 object, gan len trang html
+- Binding : Day du lieu tu phia duoi data len tren
+    + Value binding: {{ }}
+    + Property binding: VD: v-bind:id
+    + v-bind:[ten thuoc tinh] = "bien"
+        + Viet tat: dau 2 cham
+    + style and class binding: 
+        :class 
+- Model:
+    + Lien ket element voi property
+- Event handling:
+    + Bat su kien tu cac element 
+    + v-on:[ten su kien]="ten_ham()"
+        VD: v-on:click
+            v-on:mouseover
+        + Viet tat : @click
+    + Prevent default event:
+        + Huy bo event mac dinh cua element di
+            (debounce- sau 1 khoang thoi gian thi chay)
+- ref:
+    + Anh xa den chinh cai element = document.getElementById('')
+Conditional rendering: 
+    + v-show: An/Hien 1 element theo dieu kien
+    + v-hide: nguoc lai
+    + v-if: An/Hien 1 element theo dieu kien
+    + v-else-if
+    + v-else
+- List rendering:
+    + v-for (VD v-for="(task, index) in tasks" :key="index")
+
+- methods:
+    + Ham cua vue object
+
+- watch:
+    + Theo doi su thay doi cua data 
+
+hooks: 
+    + mounted: 
+
+Props:
+    + Du lieu day tu component cha sang component con
+    + Dung mang ten cac props
