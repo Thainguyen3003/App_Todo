@@ -1,7 +1,9 @@
 <template>
   <div id="app" class="container">
+    <font-awesome-icon :icon="['fas', 'robot']" />
+    <font-awesome-icon icon="user-secret" />
     <img src="./assets/logo.png" alt="" class="logo">
-
+    
     
     <Todolist />
     
@@ -73,6 +75,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   margin-top: 60px;
+  font-size: 24px;
 }
 
 .logo {
