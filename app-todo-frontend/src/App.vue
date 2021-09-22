@@ -1,26 +1,33 @@
 <template>
-  <div id="app">
-    <Task v-for="(task, index) in tasks" :key="index" :taskData="task" />
+  <div id="app" class="container">
+    <img src="./assets/logo.png" alt="" class="logo">
+
+    
+    <Todolist />
+    
+    
   </div>
 </template>
 
 <script>
-import Task from './components/Task.vue'
+import Todolist from './components/Todolist.vue'
+//import TagSelector from './components/TagSelector.vue'
 
 export default {
   name: 'App',
   data() {
     return {
-      tasks: [
-        { content: 'di cho', done: false},
-        { content: 'nau com', done: false},
-        { content: 'an uong', done: false},
-        { content: 'di ngu', done: false}
-      ]
+      tongTien: 1000000
+    }
+  },
+  filters: {
+    dauChamPhanTach: function (soTien) {
+      return soTien.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
     }
   },
   components: {
-    Task
+    Todolist,
+    //TagSelector
   }
 
 
@@ -51,8 +58,27 @@ export default {
 </script>
 
 <style>
-.done {
-  text-decoration: line-through;
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#app {
+  font-family: 'Avenir', Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+.logo {
+  display: block;
+  margin: 20px auto;
+  height: 75px;
 }
 
 </style>
